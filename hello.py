@@ -28,8 +28,6 @@ def internal_server_error(e):
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
-    name = None
-    email = None
     form = NameEmailForm()
     if form.validate_on_submit():
         old_name = session.get('name')
